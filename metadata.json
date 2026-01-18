@@ -1,0 +1,5 @@
+{
+  "name": "CSX16-SERVER STATS",
+  "description": "A modern, responsive React successor to LGSL for CSX16. Features real-time server tracking simulation, voting systems, widget generation, and user management dashboards.",
+  "requestFramePermissions": []
+}

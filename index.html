@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSX16-SERVER STATS</title>
+    <!-- Tailwind CSS will be handled by the build process, but keeping CDN for dev fallback if needed, though build is recommended -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.1) 0px, transparent 50%), 
+          radial-gradient(at 100% 0%, rgba(232, 121, 249, 0.1) 0px, transparent 50%), 
+          radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.1) 0px, transparent 50%);
+        background-attachment: fixed;
+        color: #f8fafc;
+        margin: 0;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #0f172a; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+      /* Neon Pulse Animation */
+      @keyframes neon-pulse {
+        0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+      }
+      
+      @keyframes neon-pulse-red {
+        0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(244, 63, 94, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+      }
+
+      @keyframes neon-pulse-green {
+        0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+      }
+
+      .btn-pulse { animation: neon-pulse 2s infinite; }
+      .btn-pulse-red { animation: neon-pulse-red 2s infinite; }
+      .btn-pulse-green { animation: neon-pulse-green 2s infinite; }
+
+      .glass-panel {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root">
+       <!-- Loading state while React loads -->
+       <div style="display: flex; justify-content: center; align-items: center; height: 100vh; color: #94a3b8; font-size: 1.2rem; font-weight: bold;">
+          Loading CSX16 Stats...
+       </div>
+    </div>
+    <!-- CRITICAL: This script tag is required to load the React application -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
